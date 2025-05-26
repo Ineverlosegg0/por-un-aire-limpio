@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa: Cuidado del Aire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #1E6F5C;
+            --secondary-color: #289672;
+            --dark-color: #0A3A2D;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1566837945158-3b600faf7e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        .nav-tabs .nav-link {
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+        .nav-tabs .nav-link.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            background: transparent;
+        }
+        .info-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .info-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(30, 111, 92, 0.1);
+            color: var(--primary-color);
+        }
+        .resource-link {
+            display: block;
+            padding: 15px;
+            border-radius: 8px;
+            background: white;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--dark-color);
+            border-left: 4px solid var(--primary-color);
+        }
+        .resource-link:hover {
+            background: rgba(30, 111, 92, 0.05);
+            transform: translateX(5px);
+        }
+        .floating-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-wind me-2"></i>Aire Limpio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#causas">Causas</a></li>
+                    <li class="nav-item"><a class="nav-link" href#impacto">Impacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#soluciones">Soluciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recursos">Recursos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section animate__animated animate__fadeIn">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">El Aire es Vida</h1>
+            <p class="lead fs-4">Descubre cómo la contaminación atmosférica afecta tu salud y qué podemos hacer para cambiarlo.</p>
+            <div class="mt-4">
+                <i class="fas fa-leaf floating-icon fa-3x text-white"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Causas -->
+    <section id="causas" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Principales Causas de Contaminación</h2>
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card info-card h-100">
+                        <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Industria contaminante">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Industria</h5>
+                            <p class="card-text">Según la <strong>CEPAL</strong>, América Latina emite 1.9 gigatoneladas de CO2 anuales, donde el 38% proviene del sector industrial.</p>
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#detail1">Ver detalles</button>
+                            <div class="collapse mt-2" id="detail1">
+                                <p class="small">Quema de combustibles fósiles, procesos químicos y mala gestión de residuos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card info-card h-100">
+                        <img src="https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Tráfico vehicular">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Transporte</h5>
+                            <p class="card-text">En ciudades como CDMX, el 45% de la contaminación viene de automóviles (INECC, 2022).</p>
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#detail2">Ver detalles</button>
+                            <div class="collapse mt-2" id="detail2">
+                                <p class="small">Emisiones de NOx, CO y partículas PM2.5 por combustión de gasolina/diésel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card info-card h-100">
+                        <img src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Deforestación">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Deforestación</h5>
+                            <p class="card-text">La pérdida de bosques en Amazonía libera 500 millones de toneladas de CO2/año (RAISG, 2021).</p>
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#detail3">Ver detalles</button>
+                            <div class="collapse mt-2" id="detail3">
+                                <p class="small">Los árboles absorben CO2; su eliminación reduce la capacidad del planeta de limpiar el aire.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto -->
+    <section id="impacto" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Consecuencias en la Salud y Ambiente</h2>
+            <div class="accordion" id="impactAccordion">
+                <!-- Item 1 -->
+                <div class="accordion-item mb-3 border-0 shadow-sm">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#impact1">
+                            <i class="fas fa-lungs me-2 text-danger"></i> Enfermedades Respiratorias
+                        </button>
+                    </h3>
+                    <div id="impact1" class="accordion-collapse collapse" data-bs-parent="#impactAccordion">
+                        <div class="accordion-body">
+                            <p>La <strong>OMS</strong> reporta que el 92% de la población mundial respira aire contaminado, vinculado a:</p>
+                            <ul>
+                                <li>1.4 millones de muertes anuales por EPOC.</li>
+                                <li>Incremento del 20% en casos de asma infantil en zonas urbanas.</li>
+                            </ul>
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Contaminación urbana" class="img-fluid rounded mt-2">
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="accordion-item mb-3 border-0 shadow-sm">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#impact2">
+                            <i class="fas fa-temperature-high me-2 text-warning"></i> Cambio Climático
+                        </button>
+                    </h3>
+                    <div id="impact2" class="accordion-collapse collapse" data-bs-parent="#impactAccordion">
+                        <div class="accordion-body">
+                            <p>Datos del <strong>IPCC</strong> (2023):</p>
+                            <ul>
+                                <li>Los niveles de CO2 son los más altos en 2 millones de años (420 ppm).</li>
+                                <li>América Latina podría perder el 30% de su biodiversidad para 2050.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soluciones -->
+    <section id="soluciones" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Soluciones Comprobadas</h2>
+            <div class="row g-4">
+                <!-- Solución 1 -->
+                <div class="col-md-6">
+                    <div class="p-4 border rounded-3 h-100 bg-light">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-solar-panel fa-2x text-primary"></i>
+                            </div>
+                            <h4 class="mb-0">Energías Renovables</h4>
+                        </div>
+                        <p>Países como Costa Rica generan el 99% de su electricidad de fuentes limpias (hidroeléctrica, eólica, geotérmica).</p>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85% menos emisiones</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Solución 2 -->
+                <div class="col-md-6">
+                    <div class="p-4 border rounded-3 h-100 bg-light">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                                <i class="fas fa-tree fa-2x text-primary"></i>
+                            </div>
+                            <h4 class="mb-0">Reforestación Urbana</h4>
+                        </div>
+                        <p>Bogotá plantó 802,000 árboles en 2022, reduciendo la temperatura urbana en 2°C.</p>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60% más oxígeno</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recursos -->
+    <section id="recursos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Recursos en Español</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="https://www.paho.org/es/temas/calidad-aire" class="resource-link" target="_blank">
+                        <h5><i class="fas fa-globe-americas me-2"></i> OPS - Calidad del Aire</h5>
+                        <p class="mb-0">Informes técnicos y guías para América Latina.</p>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://www.gob.mx/semarnat/articulos/contaminacion-atmosferica" class="resource-link" target="_blank">
+                        <h5><i class="fas fa-file-alt me-2"></i> SEMARNAT (México)</h5>
+                        <p class="mb-0">Políticas públicas y datos nacionales.</p>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://www.argentina.gob.ar/ambiente/calidad-aire" class="resource-link" target="_blank">
+                        <h5><i class="fas fa-chart-line me-2"></i> Argentina - Calidad del Aire</h5>
+                        <p class="mb-0">Monitoreo en tiempo real.</p>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="https://www.ideam.gov.co/web/contaminacion-y-calidad-ambiental/calidad-del-aire" class="resource-link" target="_blank">
+                        <h5><i class="fas fa-map-marked-alt me-2"></i> IDEAM (Colombia)</h5>
+                        <p class="mb-0">Mapas interactivos de contaminación.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<!-- Footer -->
+<footer class="py-4 bg-dark text-white">
+    <div class="container text-center">
+        <p class="mb-0">© 2023 Aire Limpio | Datos respaldados por 
+            <a href="https://www.paho.org/es" class="text-light" target="_blank">OPS</a> y 
+            <a href="https://www.unep.org/es" class="text-light" target="_blank">ONU Medio Ambiente</a>
+        </p>
+        <p class="mt-2">Autor: Aarón Martínez 401 V</p>
+    </div>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        // Animación al hacer scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.info-card, .accordion-item');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.5s ease';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 200 * index);
+            });
+        });
+    </script>
+</body>
+</html>
